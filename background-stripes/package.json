@@ -1,0 +1,17 @@
+{
+  "name": "background-stripes",
+  "version": "1.0.0",
+  "description": "A sass mixin to generate colorful background stripes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jota Teles",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-load-tasks": "^0.8.4",
+    "gulp-sass": "^2.1.0",
+    "gulp-watch": "^4.3.5"
+  }
+}

@@ -1,0 +1,41 @@
+.colorful-icon
+	color: transparent
+	-webkit-background-clip: text
+	background-clip: text
+	font-size: 32px
+
+	&.colorful-icon-instagram
+		@include background-stripes(to right, $instagram-brow-color, $instagram-red-color, $instagram-yellow-color, $instagram-green-color, $instagram-blue-color, $instagram-brow-color,$instagram-brow-color,$instagram-brow-color,$instagram-brow-color,$instagram-brow-color)
+
+	&.colorful-icon-star-full
+		color: $color-yellow
+		-webkit-background-clip: initial
+		background-clip: initial				
+
+	&.colorful-icon-star-empty
+		color: $color-gray-light
+		-webkit-background-clip: initial
+		background-clip: initial						
+
+	&.colorful-icon-star-half
+		@include background-stripes(to right, $color-yellow, $color-gray-light)
+	
+	&.colorful-icon-heart
+		@include background-stripes(to right, darken($flat-alizarin, 10), darken($flat-alizarin, 5), $flat-alizarin, darken($flat-alizarin, 5), darken($flat-alizarin, 10))
+	
+	&.colorful-icon-french-flag
+		@include background-stripes(to right, $france-blue, $france-white, $france-red)		
+
+	&.colorful-icon-brazil-flag
+		@include background-stripes(to right, $brazil-green, $brazil-yellow)
+	
+	&.colorful-icon-food					
+		@include background-stripes(to right, $flat-red-1, $flat-yellow-1)
+
+	&.colorful-icon-cloud
+		@include background-stripes(to left, $flat-clouds, darken($flat-clouds, 3), darken($flat-clouds, 6), darken($flat-clouds, 9))
+
+	&.colorful-icon-magic
+		@include background-stripes(to right, $color-purple, $color-blue, $color-green, $color-yellow, $color-orange)
+
+

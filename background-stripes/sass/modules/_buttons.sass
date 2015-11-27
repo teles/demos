@@ -1,0 +1,19 @@
+.btn
+	border: 0
+	cursor: pointer
+	display: inline-block
+
+	&.btn-large
+		font-size: 16px
+		padding: spacing(1) spacing(2)
+	
+	&.btn-white
+		color: $background-color-blue
+		background-color: $color-white
+		&:hover
+			background-color: $color-white-hover
+			color: $background-color-blue-hover	
+	+ .btn			
+		margin-left: spacing(1)
+
+	

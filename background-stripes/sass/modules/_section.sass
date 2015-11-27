@@ -1,0 +1,30 @@
+.pen-section
+	width: 100%
+	@include m-clearfix 
+	font-size: 15px
+
+	.pen-section-title
+		font-size: 24px
+		color: $background-color-blue
+		font-weight: 200
+		margin: spacing(1) 0
+
+	&.pen-section-highlighted
+		background-color: $background-color-blue
+		color: $color-blue	
+		text-align: center			
+		margin: 0
+		background-size: 10px
+	
+	.pen-section-sub
+		margin-top: spacing(2)		
+
+		.pen-section-sub-title
+			font-size: 15px
+			margin: 0
+			text-transform: uppercase
+			font-weight: 200
+			color: $background-color-blue
+
+	+ .pen-section		
+		margin-top: spacing(2)

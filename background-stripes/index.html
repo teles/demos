@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Background stripes mixin - A sass mixin to generate colorful background stripes.</title>
+	<link rel='stylesheet' href='css/pen.css' type='text/css'>
+	<link rel='stylesheet' href='http://weloveiconfonts.com/api/?family=fontawesome' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<section class='pen-section pen-section-highlighted'>		
+		<header class='pen-header'>
+			<h1 class="pen-title">Background stripes mixin</h1>
+			<p class="pen-subtitle">A &lt; 1kb sass mixin to generate colorful background stripes.</p>
+			<div class='pen-header-call-to-action'>
+				<button class='btn btn-large btn-white'>
+					Download <span class='hide-phone'>source</span>
+				</button>				
+				<button class='btn btn-large btn-white'>
+					<span class='hide-phone'>View</span> demos
+				</button>				
+			</div>
+		</header>
+	</section>		
+	<main class='pen-main'>
+		<section class="pen-section">
+			<h2 class="pen-section-title">Full code</h2>
+			<p>This is the full mixin code.</p>
+			<code class='pen-code col-tablet-8'>
+<pre>
+@mixin background-stripes($stripes-direction, $stripes-colors...) {
+   $stripes-list: ();      
+
+   @for $i from 1 through length($stripes-colors){      
+      $stripe-number-prev: #{100%/length($stripes-colors) * ($i - 1)};
+      $stripe-number: #{100%/length($stripes-colors) * $i};
+      $stripe-color: nth($stripes-colors, $i);
+      
+      $stripe-declaration-prev: $stripe-color $stripe-number-prev;
+      $stripe-declaration: $stripe-color $stripe-number;
+      $stripes-list: append($stripes-list, $stripe-declaration-prev, comma);    
+      $stripes-list: append($stripes-list, $stripe-declaration, comma);
+   }
+   background-image: linear-gradient($stripes-direction, $stripes-list);
+}</pre>
+			</code>
+		</section>			
+		<section class="pen-section">
+			<h2 class="pen-section-title">Demos</h2>
+			<p>There are some ideas to use your background-stripes.</p>
+			<section class='pen-section-sub row'>
+				<h3 class="pen-section-sub-title">Colorful font icons</h3>
+				<div class="col-tablet-6 p-padding-right-2">
+					<p>You may use <code class='pen-code-inline'>background-clip: text</code> to make your icon font-face more colorful.</p>
+					<p>All fonts provided by <a href="http://weloveiconfonts.com/">we love icon fonts</a>.</p>
+				</div>					
+				<div class="col-tablet-6 p-padding-right-2">
+					<span>
+						<i class="fontawesome-camera-retro colorful-icon colorful-icon-instagram"></i>
+						<i class="fontawesome-camera colorful-icon colorful-icon-instagram"></i>
+					</span>
+					<span>
+						<i class="fontawesome-star colorful-icon colorful-icon-star-full"></i>
+						<i class="fontawesome-star colorful-icon colorful-icon-star-full"></i>
+						<i class="fontawesome-star colorful-icon colorful-icon-star-full"></i>
+						<i class="fontawesome-star colorful-icon colorful-icon-star-half"></i>
+						<i class="fontawesome-star colorful-icon colorful-icon-star-empty"></i>
+					</span>
+					<span>
+						<i class="fontawesome-heart colorful-icon colorful-icon-heart"></i>
+						<i class="fontawesome-heart colorful-icon colorful-icon-brazil-flag"></i>
+					</span>				
+					<span>
+						<i class="fontawesome-food colorful-icon colorful-icon-food"></i>				
+					</span>
+					<span>
+						<i class="fontawesome-cloud colorful-icon colorful-icon-cloud"></i>				
+						<i class="fontawesome-cloud-download colorful-icon colorful-icon-cloud"></i>		
+						<i class="fontawesome-cloud-upload colorful-icon colorful-icon-cloud"></i>			
+					</span>
+					<span>
+						<i class="fontawesome-magic colorful-icon colorful-icon-magic"></i>			
+					</span>
+					<span>
+						<i class="fontawesome-camera-retro colorful-icon colorful-icon-instagram"></i>
+						<i class="fontawesome-camera colorful-icon colorful-icon-instagram"></i>
+					</span>
+					<span>
+						<i class="fontawesome-star colorful-icon colorful-icon-star-full"></i>
+						<i class="fontawesome-star colorful-icon colorful-icon-star-full"></i>
+						<i class="fontawesome-star colorful-icon colorful-icon-star-full"></i>
+						<i class="fontawesome-star colorful-icon colorful-icon-star-half"></i>
+						<i class="fontawesome-star colorful-icon colorful-icon-star-empty"></i>
+					</span>
+					<span>
+						<i class="fontawesome-heart colorful-icon colorful-icon-heart"></i>
+						<i class="fontawesome-heart colorful-icon colorful-icon-brazil-flag"></i>
+					</span>				
+					<span>
+						<i class="fontawesome-food colorful-icon colorful-icon-food"></i>				
+					</span>				
+				</div>			
+			</section>
+			<section class="pen-section-sub row">
+				<h3 class="pen-section-sub-title">Border decorations</h3>
+			</section>
+		</section>						
+	</main>
+	<footer class='pen-footer'>
+		<div class="pen-footer-content">
+			<a href='/'>Raio frontendizador</a>			
+		</div>
+	</footer>
+</body>
+</html>

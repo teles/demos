@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after 
+	-webkit-box-sizing: inherit
+	-moz-box-sizing: inherit
+	box-sizing: inherit
+
+html
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	font-family: $font-face-regular
+	position: relative
+	margin: 0
+	color: $flat-midnight-blue
+	&:before
+		content: " "
+		height: spacing(1)/2		
+		width: 100%
+		display: block
+		@include background-stripes(to right, $color-purple, $color-blue, $color-green, $color-yellow, $color-orange)
+		border-bottom: 1px solid $border-color-blue
+	body
+		padding: 0
+		margin: 0
+		font-family: $font-face-regular
+	a
+		text-decoration: none
+		color: $color-orange
+		&:hover
+			color: $color-yellow
